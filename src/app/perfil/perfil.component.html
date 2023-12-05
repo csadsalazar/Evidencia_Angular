@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div class="wrapper">
+  <div class="sidebar">
+    <div class="logo" style="padding-left: 59px; padding-top: 60px; height: 100px;">
+      <h1>DASH<b>BOARD</b></h1>
+    </div>
+    <br><br><br><br>
+
+    <nav>
+      <div style="padding-left: 30px;">
+        <button class="perfil" (click)="navigateToDashboard()"><i class="fa-solid fa-clipboard">&nbsp;</i>Inicio</button>
+      </div>
+      <br><br>
+      <div style="padding-left: 30px;">
+        <button class="empleo" (click)="navigateToEmpleo()"><i class="fa-solid fa-user">&nbsp;</i>Opciones de empleo</button>
+      </div>
+
+      <div class="usuario" style="padding-left: 80px; padding-top: 40px">
+        <button class="btn btn-primary" (click)="logout()">CERRAR SESION</button>
+      </div>
+    </nav>
+  </div>
+
+<div class="container">
+  <br>
+  <h2 class="text-center mb-4">TUS DATOS</h2>
+  <div class="general">
+    <div class="content">
+      <div *ngIf="currentUser" class="usuario-info border rounded p-3 mb-3">
+        <form (ngSubmit)="updateUserInfo()" #userForm="ngForm">
+          <div class="form-group">
+            <label for="username">Nombre de usuario:</label>
+            <input type="text" class="form-control" id="username" [(ngModel)]="currentUser.username" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" [(ngModel)]="currentUser.apellido" name="apellido" required>
+          </div>
+          <div class="form-group">
+            <label for="cedula">Cédula:</label>
+            <input type="text" class="form-control" id="cedula" [(ngModel)]="currentUser.cedula" name="cedula" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" class="form-control" id="telefono" [(ngModel)]="currentUser.telefono" name="telefono" required>
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo:</label>
+            <input type="email" class="form-control" id="correo" [(ngModel)]="currentUser.correo" name="correo" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="text" class="form-control" id="password" [(ngModel)]="currentUser.password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="footer social-icons" style="font-size: 25px;">
+    <p>&copy; 2023 Tu Empresa </p>
+    <div>
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>&nbsp;
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>&nbsp;
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>

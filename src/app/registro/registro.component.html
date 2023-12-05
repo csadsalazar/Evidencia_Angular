@@ -1,0 +1,51 @@
+<!-- Agrega esto en el head de tu index.html -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- src/app/registro/registro.component.html -->
+<div class="container mt-4 border rounded p-4">
+  <h2 class="text-center mb-4">Registro Usuario</h2>
+
+  <form (ngSubmit)="register()"   #registroForm="ngForm">
+    <div class="form-group">
+      <label for="username">Nombre:</label>
+      <input [(ngModel)]="user.username" name="username" class="form-control" autofocus required>
+      
+    </div>
+
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <input [(ngModel)]="user.apellido" name="apellido" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input [(ngModel)]="user.password" name="password" type="password" class="form-control" required>
+
+    </div>
+
+    <div class="form-group">
+      <label for="cedula">Cédula:</label>
+      <input [(ngModel)]="user.cedula" type="number"  name="cedula" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="telefono">Teléfono:</label>
+      <input [(ngModel)]="user.telefono" type="number" name="telefono" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="correo">Correo:</label>
+      <input [(ngModel)]="user.correo" name="correo" type="email" class="form-control" required>
+    </div>
+
+    <!-- Botón centrado y deshabilitado si el formulario no es válido -->
+    <div class="text-center">
+      <button  type="submit" class="btn btn-primary mb-2">Registrarse</button>
+    </div>
+
+    <div class="text-center">
+      <button (click)="navigateToIndex()" class="btn btn-primary">Volver</button>
+    </div>
+
+  </form>
+</div>

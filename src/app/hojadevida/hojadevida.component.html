@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div class="wrapper">
+  <div class="sidebar" >
+    <div class="logo" style="padding-left: 59px; padding-top:60px; height:100px;" >
+      <h1>DASH<b>BOARD</b></h1>
+    </div>
+    <br><br><br><br>
+
+    <nav>
+      <div style="padding-left: 30px;">
+        <button class="perfil" (click)="navigateToDashboard()"><i class="fa-solid fa-user">&nbsp;</i>Inicio</button>
+      </div>
+      <br><br>
+
+      <div style="padding-left: 30px;">
+        <button class="inicio" (click)="navigateToPerfil()"><i class="fa-solid fa-user">&nbsp;</i>Perfil</button>
+      </div>
+      <br><br>
+      <div style="padding-left: 30px;">
+        <button class="empleo" (click)="navigateToEmpleo()"><i class="fa-solid fa-clipboard">&nbsp;</i>Opciones de
+          empleo</button>
+      </div>
+      <div class="usuario" style="padding-left: 40px; padding-top:35px;">
+        <ul>
+          <button class="btn btn-primary" (click)="logout()">CERRAR SESION</button>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+<div class="container mt-4 border rounded p-4">
+  <br><br><br>
+  <h2 class="text-center mb-4">Hoja de Vida</h2>
+
+  <form (submit)="agregarHoja(hojaForm)">
+    <label for="nombre">Nombre:</label>
+    <input class="form-control" type="text" id="username" name="username" [(ngModel)]="hojaForm.username" required>
+
+    <label for="empresa">Apellido:</label>
+    <input class="form-control" type="text" id="apellido" name="apellido" [(ngModel)]="hojaForm.apellido" required>
+
+    <label for="puesto">Cedula:</label>
+    <input class="form-control" type="number" id="cedula" name="cedula" [(ngModel)]="hojaForm.cedula" required>
+
+    <label for="puesto">Telefono:</label>
+    <input class="form-control" type="number" id="telefono" name="telefono" [(ngModel)]="hojaForm.telefono" required>
+
+    <label for="sueldo">Correo:</label>
+    <input class="form-control" type="email" id="correo" name="correo" [(ngModel)]="hojaForm.correo" required>
+
+    <label for="sueldo">Direccion:</label>
+    <input class="form-control" type="text" id="direccion" name="direccion" [(ngModel)]="hojaForm.direccion" required>
+
+    <label for="descripcion">Descripción:</label>
+    <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="hojaForm.descripcion" required></textarea>
+    <br>
+    <div class="text-center">
+      <button class="btn btn-primary mb-2" type="submit">Enviar Hoja</button>
+    </div>
+  </form>
+</div>
+
+<div class="footer social-icons" style="font-size: 25px;">
+  <p>&copy; 2023 Tu Empresa </p>
+  <div>
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>&nbsp;
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>&nbsp;
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</div>
+
+
+

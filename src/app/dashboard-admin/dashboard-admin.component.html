@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div class="wrapper">
+  <div class="sidebar" >
+    <div class="logo" style="padding-left: 59px; padding-top:60px; height:100px;" >
+      <h1>ADMIN<b>INSTRADOR</b></h1>
+    </div>
+    <br><br><br><br>
+
+    <nav>
+
+      <div class="usuario" style="padding-left: 40px; padding-top:330px;">
+        <ul>
+          <button class="btn btn-primary" (click)="logout()">CERRAR SESION</button>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+<div class="container mt-4 border rounded p-4">
+  <br><br><br>
+  <h2 class="text-center mb-4">Tu Perfil</h2>
+
+  <form (submit)="agregarOferta(ofertaForm)">
+    <label for="nombre">Anuncio:</label>
+    <input class="form-control" type="text" id="nombre" name="nombre" [(ngModel)]="ofertaForm.nombre" required>
+
+    <label for="empresa">Empresa:</label>
+    <input class="form-control" type="text" id="empresa" name="empresa" [(ngModel)]="ofertaForm.empresa" required>
+
+    <label for="puesto">Puesto:</label>
+    <input class="form-control" type="text" id="puesto" name="puesto" [(ngModel)]="ofertaForm.puesto" required>
+
+    <label for="sueldo">Sueldo:</label>
+    <input class="form-control" type="number" id="sueldo" name="sueldo" [(ngModel)]="ofertaForm.sueldo" required>
+
+    <label for="descripcion">Descripción:</label>
+    <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="ofertaForm.descripcion" required></textarea>
+    <br>
+    <div class="text-center">
+      <button class="btn btn-primary mb-2" type="submit">Agregar Oferta</button>
+    </div>
+  </form>
+</div>
+
+<div class="footer social-icons" style="font-size: 25px;">
+  <p>&copy; 2023 Tu Empresa </p>
+  <div>
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>&nbsp;
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>&nbsp;
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</div>
+
+
+

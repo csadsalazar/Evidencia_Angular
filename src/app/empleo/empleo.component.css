@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 400px;
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+  }
+  .general{
+    flex-direction: column;
+    padding-top: 100px  ;
+  }
+  .content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content2 {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Estilos para los contenedores en la sección de contenido */
+  .content-item {
+    border: 2px solid #343a40; /* Borde sólido con color oscuro */
+    padding: 20px; /* Espaciado interno */
+    margin: 10px; /* Margen entre contenedores */
+    text-align: center;
+  }
+  
+    .footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #343a40;
+      color: #fff;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .logo {
+      padding-left: 50px;
+      margin-bottom: 20px;
+      
+      
+    }
+  
+    .usuario button {
+      width: 200px;
+      height: 70px ;
+      font-size: 20px;
+      font-weight: bolder;
+      color: white;
+    }
+  
+    .perfil {
+      background-color: #98cef2; /* Color de fondo */
+      width: 300px;
+      height: 60px;
+      font-weight: bolder;
+      font-size: 25px;
+      color: #000000; /* Color del texto */
+      padding: 10px 20px; /* Espaciado interno (arriba/abajo y izquierda/derecha) */
+      text-decoration: none; /* Quitar subrayado del enlace */
+      border: none; /* Quitar el borde del botón */
+      border-radius: 5px; /* Esquinas redondeadas */
+      cursor: pointer; /* Cambiar el cursor al pasar el ratón sobre el botón */
+    }
+  
+    /* Estilos para el botón con la clase "empleo" */
+    .empleo {
+      background-color: #ff9f9f;
+      height: 60px;
+      font-size: 23px;
+      font-weight: bolder;
+      width: 300px;
+      color: #000000;
+      padding: 10px 20px;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    .social-icons {
+      /* Estilos para los íconos de redes sociales */
+      display: flex;
+      gap: 10px; /* Espaciado entre los íconos */
+    }
+  
+    .social-icons a {
+      color: #ffffff; /* Color de los íconos */
+      transition: color 0.3s; /* Transición suave del color durante 0.3 segundos */
+    }
+  
+    .social-icons a:hover {
+      color: rgb(106, 218, 255); /* Cambiar el color al pasar el cursor */
+    }
